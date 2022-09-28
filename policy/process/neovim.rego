@@ -1,6 +1,12 @@
 package main
 import future.keywords
 
+resource := {
+  "kind": "command",
+  "command": "ps aux",
+  "format": "simple",
+}
+
 warn_no_sshd[msg] {
   not input["ps aux"]
   msg := "no process input. sshd tests will be ignored."

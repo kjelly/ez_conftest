@@ -1,6 +1,12 @@
 package main
 import future.keywords
 
+resource := {
+  "kind": "command",
+  "command": ["r snapshots --json", "pr snapshots --json"],
+  "format": "json",
+}
+
 warn_no_source[msg] {
   not input["r snapshots --json"]
   msg := "no restic input. restic tests will be ignored."

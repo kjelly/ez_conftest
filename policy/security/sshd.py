@@ -19,7 +19,7 @@ def main():
         "data": [j for j in [space.split(i) for i in lines] if j],
     }
 
-    print(json.dumps(ret, indent=4))
+    print(json.dumps([j for j in [space.split(i) for i in lines] if j], indent=4))
 
 
 if __name__ == "__main__":
