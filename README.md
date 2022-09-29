@@ -1,7 +1,7 @@
 A simple command-line application.
 
 ```
-./ez_conftest.py -c 'ps aux' './sshd.py'
+python3 ez_conftest.py -p policy/security/
 ```
 
 Output like

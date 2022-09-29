@@ -7,7 +7,7 @@ resource := {
   "format": "simple",
 }
 
-warn_no_sshd[msg] {
+warn[msg] {
   not input["ps aux"]
   msg := "no process input. sshd tests will be ignored."
 }

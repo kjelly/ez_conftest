@@ -18,7 +18,9 @@ async def get_rego_resource(path: str) -> dict:
     exitcode = await proc.wait()
     stdout, stderr = await proc.communicate()
     if exitcode > 0:
+        print(stdout.decode("utf-8"))
         print(stderr.decode("utf-8"))
+    print(path)
     return json.loads(stdout.decode("utf-8"))[0]
 
 
